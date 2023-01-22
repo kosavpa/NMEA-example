@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body id="main_body">
+<link rel="stylesheet" th:href="@{/style.css}">
+    <div id="container" th:if="${distanceInfo}">
+        <h2>Данные по файлу:</h2>
+        <div th:each="distance_info : ${distanceInfo}">
+            <h3>Дата:</h3>
+            <div th:text="${distance_info.day.getFormattedDate()}"></div>
+            <h3>Дистанция:</h3>
+            <div th:text="${distance_info.distance} + ' км'"></div>
+            <h3>Средняя скорость:</h3>
+            <div th:text="${distance_info.avgSpeed} + ' км/ч'"></div>
+        </div>
+    </div>
+
+    <div id="container">
+        <form enctype="multipart/form-data" method="post">
+            <h2>Загрузите ваш файл:</h2>
+            <input type="file" name="file">
+            <button type="submit" th:text="'Отправить и посчитать данные'"></button>
+        </form>
+    </div>
+</body>
+</html>

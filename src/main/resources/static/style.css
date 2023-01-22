@@ -1,0 +1,9 @@
+#container{
+    margin: auto;
+    padding: 20px
+    display: flex;
+    border: solid;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 600px
+}
