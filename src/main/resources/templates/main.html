@@ -7,7 +7,7 @@
 </head>
 <body id="main_body">
 <link rel="stylesheet" th:href="@{/style.css}">
-    <div id="container" th:if="${distanceInfo}">
+    <div id="container1" th:if="${distanceInfo}">
         <h2>Данные по файлу:</h2>
         <div th:each="distance_info : ${distanceInfo}">
             <h3>Дата:</h3>
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div id="container">
+    <div id="container2">
         <form enctype="multipart/form-data" method="post">
             <h2>Загрузите ваш файл:</h2>
             <input type="file" name="file">
