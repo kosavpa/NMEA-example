@@ -1,7 +1,7 @@
 package owlhome.testexample.utils;
 
 public enum FilePath {
-    LOCATION_FILE("C:\\Users\\kosav\\Desktop\\test-example\\src\\main\\fromUpload\\");
+    LOCATION_FILE("C:\\Users\\kosav\\Desktop\\fromUpload\\");
 
     private final String filePath;
 
